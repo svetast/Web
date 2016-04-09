@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body >
+<header>
+    <div id="webLogo" ><img src="webLogo.png" alt="Изображение" width="200"/></div>
+    <h1 ><span>Основы Web-технологий</span></h1>
+    <nav id="main_nav">
+        <ul class="hr">
+            <li><a href="Main.html">Main</a></li>
+            <li><a id= "tooitip" href="Web-technologies.html">Web-technologies</a>
+
+                <ul class="hr1">
+                    <li id="itemssmall" ><a href="HTML5.html">HTML5</a></li>
+                    <li id="itemssmall"><a href="CSS3.html">CSS3</a></li>
+                    <li id="itemssmall"><a href="JavaScript.html">JavaScript</a></li>
+                </ul>
+            </li>
+            <li><a href="Calculator.html">Calculator</a></li>
+            <li><a href= "Test.html">Test</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="inner">
+    <form name="calculator">
+        <table border="0" >
+            <tr>
+                <td colspan="5"><input id="editWide" name="ReadOut" type="Text" size="26"></td>
+
+
+            </tr>
+
+            <tr>
+                <td><input class = "btn" name="btnSeven" type="Button"
+                           value="7" onclick="NumPressed(7)"></td>
+                <td><input class = "btn" name="btnEight" type="Button"
+                           value="8" onclick="NumPressed(8)"></td>
+                <td><input class = "btn" name="btnNine" type="Button"
+                           value="9" onclick="NumPressed(9)"></td>
+                <td align=middle><input class = "btn" name="btnDivide" type="Button"
+                                        value=" / " onclick="Operation('/')" /></td>
+                <td><input class = "btn" name="btnClear" type="Button"
+                           value="C" onclick="Clear()" /></td>
+
+            </tr>
+
+            <tr>
+                <td><input class = "btn" name="btnFour" type="Button"
+                           value="4" onclick="NumPressed(4)"></td>
+                <td><input class = "btn" name="btnFive" type="Button"
+                           value="5" onclick="NumPressed(5)"></td>
+                <td><input class = "btn" name="btnSix" type="Button"
+                           value="6" onclick="NumPressed(6)"></td>
+                <td><input class = "btn" name="btnMultiply" type="Button"
+                           value="*" onclick="Operation('*')" /></td>
+                                <td><input class = "btn" name="btnNeg" type="button"
+                           value="+/-" onclick="Neg()" /></td>
+
+
+            </tr>
+            <tr>
+                <td><input class = "btn" name="btnOne" type="Button"
+                           value="1" onclick="NumPressed(1)"></td>
+                <td><input class = "btn" name="btnTwo" type="Button"
+                           value="2" onclick="NumPressed(2)"></td>
+                <td><input class = "btn" name="btnThree" type="Button"
+                           value="3" onclick="NumPressed(3)"></td>
+                <td><input class = "btn" name="btnMinus" type="Button"
+                           value="-" onclick="Operation('-')" /></td>
+                <td id="big" rowspan="2"><button class = "btn">&#61;</button></td>
+           </tr>
+            <tr>
+                <td colspan="2"><input class = "btn"  name="btnZero" type="Button"
+                           value="0" onclick="NumPressed(0)"></td>
+                                <td ><button  class = "btn">&#46;</button></td>
+                <td ><input class = "btn" name="btnPlus" type="Button"
+                       value="+" onclick="Operation('+')" /></td>
+
+
+
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+<script>
+    function sum(a,b) {
+        return a + b;
+    }
+    var z  = sum(5,3)
+    console.log(z);
+
+    function sub (a,b) {
+        return a - b;
+    }
+    var x  = sub (15,3)
+    console.log(x);
+
+    function divide (a,b) {
+        return a / b;
+    }
+    var v  = divide (10,5)
+    console.log(v);
+
+    function mul(a,b) {
+        return a * b;
+    }
+    var b  = mul(8,5)
+    console.log(b);
+
+    function calc(a,b,c) {
+        if (c == '+') {
+            return sum(a,b);
+        }
+
+        if (c == '-') {
+            return sub(a,b);
+        }
+
+
+        if (c == '/') {
+            return divide(a,b);
+        }
+
+        if (c == '*') {
+            return mul(a,b);
+        }
+    }
+
+    var operations = {
+        '+': sum,
+        '-': sub,
+        '*':mul,
+        '/': divide
+    }
+
+
+
+</script>
+
+<footer>
+
+    <address><a href="mailto:stepanovasveta@ukr.net"><em>Пишите: stepanovasveta@ukr.net</em></a></address>
+
+    <p>&copy; Степанова С. 2015</p>
+</footer>
+
+
+
+</body>
+</html>
