@@ -1,1 +1,4 @@
-# Web
+# Web project
+
+
+Author: Svetlana Stepanova 
